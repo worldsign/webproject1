@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹프로그래밍 2조</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        background: #EEEEEE;
+        color: #0095DD;
+    }
+
+    .container {
+        width: 700px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        width: 150%;
+        align-items: center;
+        padding: 1.2rem 0;
+        color: white;
+        background-color: #0095DD;
+    }
+
+    header>p {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    header>ul {
+        display: flex;
+    }
+
+    header>ul>li {
+        list-style-type: none;
+        margin-left: 1.5rem;
+    }
+
+    header>ul>li>i {
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 800;
+        padding-bottom: 5px;
+        color: #0095DD;
+    }
+
+    section {
+        padding: 0.3rem;
+        text-align: center;
+    }
+
+    canvas {
+        width: 480px;
+        height: 480px;
+        display: block;
+        margin: auto;
+        height: 100%;
+        background-color: #EEEEEE;
+    }
+
+    footer {
+        margin-bottom: 2rem;
+        color: black;
+        width: 150%;
+        line-height: 30px;
+        border-top: 1px solid #0095DD;
+    }
+    
+    .button {
+        border: none;
+        background-color: #0095DD;
+        color: white;
+        padding: 5px 5px;
+        cursor: pointer;
+    }
+        
+</style>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#bctl").click(function () {
+            $(location).attr("href", "https://bctl.bu.ac.kr/");
+        })
+
+        $("#20172407").click(function () {
+            $(location).attr("href", "https://www.instagram.com/angjaehyun/");
+        })
+
+        $("#20182077").click(function () {
+            $(location).attr("href", "https://www.instagram.com/jmine_p/");
+            $(location).attr("target","_blank");
+        })
+
+        $("#20211291").click(function () {
+            $(location).attr("href", "https://www.instagram.com/min._.g25/");
+        })
+        $("#20223083").click(function () {
+            $(location).attr("href", "https://www.instagram.com/");
+        })
+       
+    })
+
+</script>
+
+<body>
+    <div class="container">
+        <header>
+            <p id="bctl">&emsp;BRICKS BREAKING</p>
+            <ul>
+                <li><button class="button" type="button" id="20172407"><i class="fa fa-instagram"
+                            aria-hidden="true">&nbsp;안재현</i></button></li>
+                <li><button class="button" type="button" id="20182077"><i class="fa fa-instagram"
+                            aria-hidden="true">&nbsp;박종민</i></button></li>
+                <li><button class="button" type="button" id="20211291"><i class="fa fa-instagram"
+                            aria-hidden="true">&nbsp;김민경</i></button></li>
+                <li><button class="button" type="button" id="20223083"><i class="fa fa-instagram"
+                            aria-hidden="true">&nbsp;최시현</i></button></li>&emsp;
+                          
+            </ul>
+        </header>
+
+        <section>
+            <canvas id="myCanvas" width="480" height="480" ; style="border: 1px solid #0095DD;">
+                <script src="ball.js"></script>
+            </canvas>
+        </section>
+        <footer>
+            <p>
+                [게임 설명]<br>
+                방향키를 통해 막대를 움직여서 공을 튕기는 게임입니다. | 게임 시작: SpaceBar<br>
+                Level: 총 3단계로 구성 | Score: 한 개의 사각형을 없앨 때마다 1점씩 증가 | Life: 총 5개
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>
